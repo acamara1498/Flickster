@@ -2,25 +2,41 @@ package com.example.acamara.flickster.models;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 /**
  * Created by acamara on 6/21/17.
  */
 
+@Parcel
 public class Movie
 {
     // values from API
-    private  String title;
-    private String overview;
-    private String posterPath;// only the path
-    private String backdropPath;
+    long id;
+    double voteAverage;
+    String title;
+    String overview;
+    String posterPath;// only the path
+    String backdropPath;
+    String trailerPath;
+
+    //empty constructor for the parceler library
+    public Movie() {}
 
     // initialize from JSON data
-    public Movie(JSONObject object) throws JSONException {
-        title = object.getString("title");
-        overview = object.getString("overview");
-        posterPath = object.getString("poster_path");
-        backdropPath = object.getString("backdrop_path");
+    public Movie(JSONObject movie) throws JSONException
+    {
+        id = movie.getLong("id");
+        title = movie.getString("title");
+        overview = movie.getString("overview");
+        posterPath = movie.getString("poster_path");
+        //trailerPath = object.getString("");
+        backdropPath = movie.getString("backdrop_path");
+        voteAverage = movie.getDouble("vote_average");
+    }
+
+    public double getVoteAverage() {
+        return voteAverage;
     }
 
     public String getTitle()
@@ -42,4 +58,15 @@ public class Movie
     {
         return backdropPath;
     }
+
+    public long getId() {
+        return id;
+    }
+
+
+    public String getTrailerUrl() {
+        return trailerPath;
+    }
+
+
 }

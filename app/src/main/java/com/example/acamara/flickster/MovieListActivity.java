@@ -110,6 +110,11 @@ public class MovieListActivity extends AppCompatActivity {
         });
     }
 
+/*    private void getTrailers()
+    {
+
+    }
+*/
     //get the configuration from the API
     private void getConfiguration()
     {

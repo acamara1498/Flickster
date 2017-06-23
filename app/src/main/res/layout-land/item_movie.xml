@@ -5,28 +5,48 @@
 
     android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/ivBackdropImage"
+    <FrameLayout
+        android:id="@+id/llPoster"
         android:layout_width="480dp"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:layout_marginRight="5dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/flicks_backdrop_placeholder"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBackdropImage"
+            android:layout_width="480dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/flicks_backdrop_placeholder" />
+
+        <ImageButton
+            android:id="@+id/ibPlayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:maxHeight="100dp"
+            android:maxWidth="100dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/playicon" />
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/ivBackdropImage"
+        android:layout_toRightOf="@+id/llPoster"
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Medium"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/tvOverview"
@@ -35,7 +55,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tvTitle"
-        android:layout_toRightOf="@+id/ivBackdropImage"
-        android:text="Movie overview and synopsis" />
+        android:layout_toRightOf="@+id/llPoster"
+        android:text="Movie overview and synopsis"
+        android:textColor="@android:color/white" />
+
 
 </RelativeLayout>
