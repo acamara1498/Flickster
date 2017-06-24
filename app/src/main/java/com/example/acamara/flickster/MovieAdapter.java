@@ -110,12 +110,16 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
                             // load the results into movies list
                             try
                             {
+                                String youtubeKey ="";
                                 JSONArray results = response.getJSONArray("results");
                                 if (results.length() > 0 && results.getJSONObject(0).getString("site").equals("YouTube"))
                                 {
-                                    String youtubeKey = results.getJSONObject(0).getString("key");
+                                    youtubeKey = results.getJSONObject(0).getString("key");
                                     Log.i("adapter", youtubeKey);
                                 }
+                                Intent intent = new Intent(context, MovieTrailerActivity.class);
+                                intent.putExtra("youTubeKey", youtubeKey);
+                                context.startActivity(intent);
 
                             }
                             catch (JSONException e)
