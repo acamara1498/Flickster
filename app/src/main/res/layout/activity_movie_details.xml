@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
+    android:background="#66ccff"
     tools:context="com.codepath.flicks.MovieDetailsActivity">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/holo_orange_light" />
 
     <TextView
         android:id="@+id/tvOverview"
@@ -24,7 +24,7 @@
         android:layout_below="@+id/tvTitle"
         android:layout_centerHorizontal="true"
         android:text="TextView"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/holo_orange_light" />
 
     <RatingBar
         android:id="@+id/rbVoteAverage"

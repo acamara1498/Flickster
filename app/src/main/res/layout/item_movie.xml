@@ -24,16 +24,17 @@
         android:layout_toRightOf="@+id/ivPosterImage"
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/black" />
 
     <TextView
         android:id="@+id/tvOverview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivPosterImage"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tvTitle"
         android:layout_toRightOf="@+id/ivPosterImage"
         android:text="Movie overview and synopsis"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/black" />
 </RelativeLayout>
