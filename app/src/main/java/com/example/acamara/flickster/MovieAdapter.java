@@ -170,6 +170,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
         TextView tvTitle;
         TextView tvOverview;
         ImageButton ibPlayButton;
+        ImageView ivDetails;
 
         public ViewHolder(View itemView)
         {
@@ -177,6 +178,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
             // lookup view objects by id
             ivPosterImage = (ImageView) itemView.findViewById(R.id.ivPosterImage);
             ivBackdropImage = (ImageView) itemView.findViewById(R.id.ivBackdropImage);
+            ivDetails = (ImageView) itemView.findViewById(R.id.ivDetails);
             tvOverview = (TextView) itemView.findViewById(R.id.tvOverview);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
             ibPlayButton = (ImageButton) itemView.findViewById(R.id.ibPlayButton);

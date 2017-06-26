@@ -3,6 +3,7 @@ package com.example.acamara.flickster;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -40,5 +41,11 @@ public class MovieDetailsActivity extends AppCompatActivity
         //vote average is 0..10. convert 0..5 by by 2
         float voteAverage = (float) movie.getVoteAverage();
         rbVoteAverage.setRating(voteAverage = voteAverage > 0 ? voteAverage / 2.0f : voteAverage);
+
+
+    }
+
+    public void returnToMain(View view) {
+        this.finish();
     }
 }
